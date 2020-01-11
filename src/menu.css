@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    position: relative;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu .menu__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.75);
+    padding: 10px 15px;
+}
+
+.menu .menu__block {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.menu .menu__block.menu__block--logo {
+    max-width: 90%;
+}
+
+.menu .menu__block.menu__block--button {
+    max-width: 10%;
+}
+
+.menu .menu__button {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-menu'%3E%3Cline x1='3' y1='12' x2='21' y2='12'%3E%3C/line%3E%3Cline x1='3' y1='6' x2='21' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='18' x2='21' y2='18'%3E%3C/line%3E%3C/svg%3E");
+    background-color: #fff;
+    border: 0px;
+    background-position: center;
+    background-size: cover;
+}
+
+.menu .menu__button.active {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-x'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E");
+}
+
+.menu .menu__container {
+    position: fixed;
+    background: #e3e3e3;
+    width: 100%;
+    height: calc(100vh - 50px);
+    top: 50px;
+    left: 0;
+    transform: translateX(100%);
+    transition: transform .3s ease-in-out;
+}
+
+.menu .menu__container.active {
+    transform: translateX(0%);
+}
+
+.menu .menu__content {
+    padding: 15px;
+    overflow: auto;
+    max-height: 100%;
+}
+
+.menu .menu__link, .menu .menu__link:hover, .menu .menu__link:focus {
+    font-size: 21px;
+    color: #000;
+}
+
+.menu .menu__text {
+    font-size: 21px;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.menu .menu__text:last-child {
+    margin-bottom: 0px;
+}
